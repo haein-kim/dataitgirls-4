@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            h1{
-                border:1px solid black;
-                background-color:green;
-            }
-        </style>
+        <script>
+            
+        </script>
     </head>
     <body> 
         <!-- <h1 style="border:1px solid black;background-color:green;">WEB</h1> -->
         <input type="button" value="day" onclick="
-        document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black';
+        var bodyTag = document.querySelector('body');
+        bodyTag.style.backgroundColor='white';
+        bodyTag.style.color='black';
+        document.querySelector('#a1').style.color='black';
+        document.querySelector('#a2').style.color='black';
+        document.querySelector('#a3').style.color='black';
         ">
         <input type="button" value="night" onclick="
-        document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='white';
+        var bodyTag = document.querySelector('body');
+        body.style.backgroundColor='black';
+        body.style.color='white';
         document.querySelector('#a1').style.color='white';
         document.querySelector('#a2').style.color='white';
         document.querySelector('#a3').style.color='white';
