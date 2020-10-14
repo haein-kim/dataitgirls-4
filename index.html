@@ -6,30 +6,39 @@
         </script>
     </head>
     <body>
+        <script>
+        function 야간모드(){
+            var bodyTag = document.querySelector('body');
+            bodyTag.style.backgroundColor='black';
+            bodyTag.style.color='white';
+            var as = document.querySelectorAll('a');
+                var i=0;
+                while(i<as.length){
+                    as[i].style.color = 'white';
+                    i=i+1;
+                }
+        }
+        function 주간모드(){
+            var bodyTag = document.querySelector('body');
+                body.style.backgroundColor='white';
+                body.style.color='black';
+                var as = document.querySelectorAll('a');
+                var i=0;
+                while(i<as.length){
+                    as[i].style.color = 'black';
+                    i=i+1;
+                }
+        }
+        </script>
         <!-- <h1 style="border:1px solid black;background-color:green;">WEB</h1> -->
         <input type="button" id="screenModeBtn" value="night" onclick="
-        //screenModeBtn의 value 값이 nigth와 같으냐?
             var mode = document.querySelector('#screenModeBtn').value;
-            if(mode === 'day'){
-                // 야간모드 코드
-                var bodyTag = document.querySelector('body');
-                bodyTag.style.backgroundColor='white';
-                bodyTag.style.color='black';
-                document.querySelector('#a1').style.color='black';
-                document.querySelector('#a2').style.color='black';
-                document.querySelector('#a3').style.color='black';
-                // 버튼의 value 값을 day 로 변경
-                document.querySelector('#screenModeBtn').value = 'night';
-            } else {
-                // 주간모드 코드
-                var bodyTag = document.querySelector('body');
-                body.style.backgroundColor='black';
-                body.style.color='white';
-                document.querySelector('#a1').style.color='white';
-                document.querySelector('#a2').style.color='white';
-                document.querySelector('#a3').style.color='white';
-                // 버튼의 value 값을 night 로 변경
+            if(mode === 'night'){
+                야간모드()
                 document.querySelector('#screenModeBtn').value = 'day';
+            } else {
+                주간모드()
+                document.querySelector('#screenModeBtn').value = 'night';
             }
         ">
 
@@ -38,17 +47,23 @@
         var bodyTag = document.querySelector('body');
         bodyTag.style.backgroundColor='white';
         bodyTag.style.color='black';
-        document.querySelector('#a1').style.color='black';
-        document.querySelector('#a2').style.color='black';
-        document.querySelector('#a3').style.color='black';
+        var as = document.querySelectorAll('a');
+                var i=0;
+                while(i<as.length){
+                    as[i].style.color = 'black';
+                    i=i+1;
+                }
         ">
         <input type="button" value="night" onclick="
         var bodyTag = document.querySelector('body');
         body.style.backgroundColor='black';
         body.style.color='white';
-        document.querySelector('#a1').style.color='white';
-        document.querySelector('#a2').style.color='white';
-        document.querySelector('#a3').style.color='white';
+        var as = document.querySelectorAll('a');
+                var i=0;
+                while(i<as.length){
+                    as[i].style.color = 'white';
+                    i=i+1;
+                }
         ">
 
         <h1>WEB</h1>
